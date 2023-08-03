@@ -7,7 +7,7 @@ A quick reference for building edk2 on linux
 ### Install dependencies
  
 ```bash
-sudo apt install build-essential git uuid-dev nasm acpica-tools 
+sudo apt install build-essential git uuid-dev nasm acpica-tools python
 ```
 
 ### Clone git repo
@@ -24,7 +24,7 @@ You may optionally checkout the latest stable version, prefix is `edk2-stable`.
 
 ```bash
 . edksetup.sh
-make -C ./BaseTools
+make -C ./BaseTools -j $(nproc)
 ```
 
 
